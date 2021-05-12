@@ -17,5 +17,6 @@ use Illuminate\Support\Facades\Storage;
 Route::get('/', function () {
     return view('form');
 });
+Route::get('/{tempLink}' , [\App\Http\Controllers\LinkController::class , 'redirectLink']);
 
 Route::post('/' , [\App\Http\Controllers\FileController::class , 'saveFile']);
